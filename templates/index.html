@@ -1,0 +1,28 @@
+<html>
+<head>
+  <title>Lista de Pacientes</title>
+  <meta http-equiv="refresh" content="1" />  
+</head>
+
+<body>
+  <h1>Lista de pacientes monitorados</h1>
+    <div id="demo"></div>
+  </body>
+  
+<script type="text/javascript">
+  var my_text = '{{ array_resultante }}'; //retorna um objeto no formato JSON
+  var txt = JSON.stringify(my_text)  // converte o objeto em texto e formata como JSON
+  var sub_txt = txt.split('}, ')     // artifício que usei para separar os dados dos pacientes
+  // var split_text = my_text.split('}, ')
+  
+  console.log(txt)  // essas duas linhas são variáveis de controle que mostrei no console do browser para debugar
+  console.log(typeof(txt)) 
+
+    console.log(typeof(txt_sub_txt))
+    for(let i = 0; i < sub_txt.length; i++){
+    if(sub_txt.includes('grave') )
+      document.getElementById("demo").innerHTML += sub_txt[i].fontcolor('red') + '<p>\n</p>'; 
+    document.getElementById("demo").innerHTML += sub_txt[i] + '<p>\n</p>'; 
+    }
+</script>
+</html>

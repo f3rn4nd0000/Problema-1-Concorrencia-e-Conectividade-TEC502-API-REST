@@ -1,0 +1,110 @@
+
+<!-- <script type="text/javascript">
+  var myDiv = document.getElementById("myDiv");
+  // var myDiv2 = document.getElementById("myDiv2");
+  myDiv.innerHTML = this.flask_data + "aoifosio";
+  var mySecondString = myDiv.innerText.slice('oxigenacao')
+  console.log("mysecondstring"+mySecondString)
+  // var mySecondDiv.innerHTML = mySecondString
+  console.log(typeof(this.flask_data))
+  // myDiv2.innerHTML = "<i>Content of second DIV element</i>";
+</script> -->
+
+var my_text = '{{ array_resultante.get_json() }}' //retorna um objeto no formato JSON
+var test1 = '{{array_resultante}}'
+var flask_data = my_text
+var split_text = my_text.split("},") 
+var new_text = new Object()
+var s_obj = new String(my_text)
+
+var my_js_text = JSON.parse(my_text);
+var my_array = []
+my_array.push(my_js_text)
+console.log("JSON parse"+JSON.parse(test1))
+new_var = JSON.stringify(my_text)
+new_var.split('[')
+new_process = JSON.parse(new_var)
+console.log(new_process)
+
+console.log("split_text = "+split_text)
+console.log("1"+s_obj[11])
+console.log(my_text)
+console.log("my text type = "+typeof(my_text))
+console.log("split text type = "+typeof(split_text))
+JSON.parse(JSON.stringify(my_text))
+console.log(flask_data)  
+console.log("my array pop = "+my_array[0])
+for (let i = 0; i < split_text.length; i++){
+  document.getElementById("demo").innerHTML += JSON.stringify(my_text) + '<p>\n</p>'; 
+  document.getElementById("demo").innerHTML += JSON.stringify(my_text, null, 2)
+}
+
+
+//   var obj = JSON.parse(my_text, function (key, value) {
+//   if (key === "Bryan") {
+//     return value.toUpperCase();
+//   } else {
+//     return value;
+//   }
+// });
+
+
+ <!-- <h3>
+    Lista de pacientes:
+    <table>
+      <tr>
+         <td onload="writeOnPage()"></td> 
+            <td>
+            <div id="myDiv"></div>
+          </td>
+        </tr>
+      </table>
+    </h3> -->  
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript">
+      var htmlText = data.map(function(my_data){
+        return `
+          <div>
+          <p>asdasdasdasd</p>
+          <p> Nome: ${my_data.nome}</p>
+          <p> Location: ${my_data.oxigenacao}</p>
+          <p> Description: ${my_data.gravidade}</p>
+          </div>
+          `;
+        });
+        $('body').append(htmlText);
+    </script> -->
+
+     <!-- <script type="text/javascript">
+    var flask_data = '{{ array_resultante.json }}';
+  </script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></sc
+
+
+      var my_text = '{{ array_resultante.get_json() }}' //retorna um objeto no formato JSON
+  // var test1 = '{{array_resultante}}'
+  var flask_data = my_text
+  var split_text = my_text.split("},") 
+  var new_text = new Object()
+  var s_obj = new String(my_text)
+
+  // var my_js_text = JSON.parse(my_text);
+  // var my_array = []
+  // my_array.push(my_js_text)
+  // console.log("JSON parse"+JSON.parse(test1))
+  new_var = JSON.stringify(my_text)
+  new_var.split('[')
+  // new_process = JSON.parse(new_var)
+  // console.log(new_process)
+
+  // console.log("split_text = "+split_text)
+  // console.log("1"+s_obj[11])
+  // console.log(my_text)
+  // console.log("my text type = "+typeof(my_text))
+  // console.log("split text type = "+typeof(split_text))
+  // JSON.parse(JSON.stringify(my_text))
+  // console.log(flask_data)  
+  // console.log("my array pop = "+my_array[0])
+  for (let i = 0; i < split_text.length; i++){
+    document.getElementById("demo").innerHTML += JSON.stringify(my_text) + '<p>\n</p>'; 
+    // document.getElementById("demo").innerHTML += JSON.stringify(my_text, null, 2)
+  }
