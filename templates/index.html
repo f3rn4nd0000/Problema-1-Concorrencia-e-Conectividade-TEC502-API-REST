@@ -12,8 +12,7 @@
 <script type="text/javascript">
   var my_text = '{{ array_resultante }}'; //retorna um objeto no formato JSON
   var txt = JSON.stringify(my_text)  // converte o objeto em texto e formata como JSON
-  var sub_txt = txt.split('}, ')     // artifício que usei para separar os dados dos pacientes
-  // var split_text = my_text.split('}, ')
+  var sub_txt = txt.split('}, ')     // artifício que usei para separar os dados dos pacientes e exibir em linhas diferentes
   
   console.log(txt)  // essas duas linhas são variáveis de controle que mostrei no console do browser para debugar
   console.log(typeof(txt)) 
@@ -26,3 +25,4 @@
     }
 </script>
 </html>
+
